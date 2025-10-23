@@ -1,0 +1,5 @@
+{
+  "/not-found": "app/not-found.js",
+  "/pricing-sheet/page": "app/pricing-sheet/page.js",
+  "/pricing-sheet/debug/page": "app/pricing-sheet/debug/page.js"
+}

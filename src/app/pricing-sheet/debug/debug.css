@@ -1,0 +1,153 @@
+/* ========================================
+   🔍 Debug Page Styles
+   ======================================== */
+
+/* Debug page container - Clean, professional layout */
+.debug-page {
+  @apply min-h-screen bg-gray-50;
+}
+
+.debug-container {
+  @apply max-w-7xl mx-auto px-4 py-6;
+}
+
+/* Debug sections - Clean white cards with subtle shadows */
+.debug-section {
+  @apply bg-white border border-gray-200 rounded-lg p-4 mb-6 shadow-sm;
+}
+
+.debug-section-title {
+  @apply text-lg font-semibold mb-4 text-gray-900;
+}
+
+/* Input form styling */
+.debug-input-form {
+  @apply bg-white border border-gray-200 rounded-lg p-4 mb-6 shadow-sm;
+}
+
+.debug-form-grid {
+  @apply grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4;
+}
+
+.debug-form-field {
+  @apply w-full bg-white border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500;
+}
+
+.debug-calculate-button {
+  @apply bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500;
+}
+
+/* Summary section */
+.debug-input-summary {
+  @apply bg-white border border-gray-200 rounded-lg p-4 shadow-sm;
+}
+
+.debug-summary-grid {
+  @apply grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-4;
+}
+
+.debug-summary-item {
+  @apply text-center;
+}
+
+.debug-summary-label {
+  @apply text-gray-600 text-sm mb-1;
+}
+
+.debug-summary-value {
+  @apply font-medium text-gray-900;
+}
+
+/* Risk adjustments section */
+.debug-risk-adjustments {
+  @apply bg-white border border-gray-200 rounded-lg p-4 shadow-sm;
+}
+
+.debug-adjustment-row {
+  @apply flex justify-between items-center p-3 bg-gray-50 rounded;
+}
+
+.debug-adjustment-label {
+  @apply text-sm text-gray-600;
+}
+
+.debug-adjustment-value {
+  @apply font-mono font-medium;
+}
+
+.debug-adjusted-rate {
+  @apply flex justify-between items-center p-4 bg-red-50 rounded-lg border border-red-200;
+}
+
+.debug-adjusted-rate-label {
+  @apply font-semibold text-gray-800;
+}
+
+.debug-adjusted-rate-value {
+  @apply font-mono text-xl font-bold text-red-600;
+}
+
+.debug-lcp-keys {
+  @apply p-3 bg-gray-50 rounded-lg border border-gray-200;
+}
+
+.debug-lcp-keys-label {
+  @apply text-sm text-gray-600 mb-2 font-medium;
+}
+
+.debug-lcp-keys-value {
+  @apply font-mono text-sm bg-white p-2 rounded border;
+}
+
+/* NPV configuration section */
+.debug-npv-config {
+  @apply bg-white border border-gray-200 rounded-lg p-4 shadow-sm;
+}
+
+.debug-config-grid {
+  @apply grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4;
+}
+
+.debug-config-item {
+  @apply text-center p-3 bg-gray-50 rounded;
+}
+
+.debug-config-label {
+  @apply text-gray-600 text-sm mb-1;
+}
+
+.debug-config-value {
+  @apply font-mono font-medium;
+}
+
+/* Final outputs section */
+.debug-final-outputs {
+  @apply bg-gradient-to-r from-green-600 to-blue-600 rounded-lg p-6 shadow-lg;
+}
+
+.debug-outputs-title {
+  @apply text-2xl font-semibold mb-6 text-white;
+}
+
+.debug-outputs-grid {
+  @apply grid grid-cols-1 md:grid-cols-3 gap-6;
+}
+
+.debug-output-card {
+  @apply bg-white bg-opacity-10 rounded-lg p-6 backdrop-blur-sm border border-white border-opacity-20;
+}
+
+.debug-output-label {
+  @apply text-white text-sm mb-2 font-medium;
+}
+
+.debug-output-value {
+  @apply text-4xl font-bold mb-3;
+}
+
+.debug-output-discount {
+  @apply text-sm;
+}
+
+/* Color coding for different types of values - using Tailwind classes directly */
+

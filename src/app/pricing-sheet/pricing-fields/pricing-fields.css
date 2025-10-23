@@ -1,0 +1,117 @@
+/* PricingFields Component Styles */
+
+/* Container and Layout */
+.pricing-fields-container {
+  @apply space-y-3;
+}
+
+.pricing-fields-wrapper {
+  @apply bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden;
+}
+
+.pricing-fields-scroll-area {
+  overflow-x: auto;
+  /* Custom scrollbar for webkit browsers */
+  scrollbar-width: thin;
+  scrollbar-color: rgb(209 213 219) rgb(243 244 246);
+}
+
+.pricing-fields-scroll-area::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.pricing-fields-scroll-area::-webkit-scrollbar-track {
+  background: rgb(243 244 246);
+  border-radius: 3px;
+}
+
+.pricing-fields-scroll-area::-webkit-scrollbar-thumb {
+  background: rgb(209 213 219);
+  border-radius: 3px;
+}
+
+.pricing-fields-scroll-area::-webkit-scrollbar-thumb:hover {
+  background: rgb(156 163 175);
+}
+
+.pricing-fields-table {
+  @apply min-w-full divide-y divide-gray-200;
+  width: 100%;
+  table-layout: fixed;
+}
+
+/* Table Headers */
+.pricing-input-header {
+  @apply px-2 py-2 text-left text-xs font-medium uppercase tracking-wider bg-yellow-500 text-yellow-900;
+}
+
+.pricing-output-header {
+  @apply px-2 py-2 text-left text-xs font-medium uppercase tracking-wider bg-green-500 text-green-900;
+}
+
+/* No Offer Row Highlighting */
+.pricing-row-no-offer {
+  @apply bg-red-50;
+}
+
+.pricing-row-no-offer:hover {
+  @apply bg-red-100;
+}
+
+.pricing-row-no-offer .pricing-field-input {
+  @apply bg-red-50 border-red-200;
+}
+
+.pricing-row-no-offer .pricing-currency-input {
+  @apply bg-red-50 border-red-200;
+}
+
+.pricing-header-content {
+  @apply truncate;
+}
+
+/* Table Body */
+.pricing-table-row {
+  @apply hover:bg-gray-50 transition-colors;
+}
+
+.pricing-row-even {
+  @apply bg-white;
+}
+
+.pricing-row-odd {
+  @apply bg-gray-50;
+}
+
+.pricing-table-cell {
+  @apply px-2 py-1.5 border border-gray-200 align-top;
+}
+
+.pricing-cell-content {
+  @apply min-h-[2rem] flex items-center;
+}
+
+    /* Form Inputs - Smaller font size */
+    .pricing-field-input {
+      @apply w-full px-1 py-0.5 text-[10px] border border-gray-300 rounded-sm focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500 bg-white;
+    }
+
+/* Date inputs - hide calendar icon */
+.pricing-date-input {
+  @apply pricing-field-input;
+}
+
+/* Hide calendar icon in webkit browsers */
+.pricing-date-input::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Currency inputs */
+.pricing-currency-input {
+  @apply pricing-field-input;
+  text-align: right;
+  font-family: 'Courier New', monospace;
+}
