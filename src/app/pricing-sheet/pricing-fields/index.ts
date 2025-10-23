@@ -2,7 +2,7 @@
 export { default } from './PricingFields'
 
 // Re-export types from parent for convenience
-export type { PricingRow } from '../page'
+export type { PricingRow } from '../PricingFields'
 
 // Mock data utilities
 export { generateMockData, convertToISODate, cleanAmount } from './mockData'

@@ -23,4 +23,4 @@ export {
 export { normalizeText, findFieldKey } from './utils'
 
 // Main parser function
-export { parseCSVData } from './csvParser'
+export { parseCSVData } from '../csvParser'

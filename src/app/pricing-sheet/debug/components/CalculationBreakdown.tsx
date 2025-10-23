@@ -58,6 +58,18 @@ interface CalculationBreakdownProps {
 
 export default function CalculationBreakdown({ calculationBreakdown }: CalculationBreakdownProps) {
   const runtimeConfig = getRuntimeConfig()
+
+  // Map RuntimeConfig (UPPER_CASE) to NPVConfig format (camelCase)
+  const mappedRuntimeConfig = {
+    baseDiscountRate: runtimeConfig.BASE_DISCOUNT_RATE,
+    baseDiscountRateLCP: runtimeConfig.BASE_DISCOUNT_RATE_LCP,
+    familyProtectionRate: runtimeConfig.FAMILY_PROTECTION_DISCOUNT_RATE,
+    minRateSpread: runtimeConfig.RATE_SPREADS.min,
+    maxRateSpread: runtimeConfig.RATE_SPREADS.max,
+    minAmountAdjustment: runtimeConfig.AMOUNT_ADJUSTMENTS.min,
+    maxAmountAdjustment: runtimeConfig.AMOUNT_ADJUSTMENTS.max
+  }
+
   const fileConfig = {
     baseDiscountRate: BASE_DISCOUNT_RATE,
     baseDiscountRateLCP: BASE_DISCOUNT_RATE_LCP,
@@ -68,7 +80,7 @@ export default function CalculationBreakdown({ calculationBreakdown }: Calculati
     maxAmountAdjustment: AMOUNT_ADJUSTMENTS.max
   }
 
-  const isRuntimeDifferent = JSON.stringify(runtimeConfig) !== JSON.stringify(fileConfig)
+  const isRuntimeDifferent = JSON.stringify(mappedRuntimeConfig) !== JSON.stringify(fileConfig)
 
   return (
     <div className="space-y-6">
@@ -94,7 +106,7 @@ export default function CalculationBreakdown({ calculationBreakdown }: Calculati
             <strong>Note:</strong> Runtime configuration overrides file values for calculations.
             Changes persist in browser storage until reset.
           </div>
-          <NPVConfig npvConfig={runtimeConfig} isRuntimeConfig={true} />
+          <NPVConfig npvConfig={mappedRuntimeConfig} isRuntimeConfig={true} />
         </div>
       )}
 

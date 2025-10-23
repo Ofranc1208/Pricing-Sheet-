@@ -1,4 +1,4 @@
-import type { PaymentFrequency } from '../../../../../npvCalculations'
+import type { PaymentFrequency } from '../../../../../../npvCalculations'
 
 interface PaymentFrequencyCardProps {
   rates: {
