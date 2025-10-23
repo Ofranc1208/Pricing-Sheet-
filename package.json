@@ -4,8 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "chmod +x node_modules/.bin/next && next build",
     "prebuild": "npm install",
+    "postinstall": "chmod +x node_modules/.bin/next",
     "start": "next start",
     "lint": "next lint"
   },
